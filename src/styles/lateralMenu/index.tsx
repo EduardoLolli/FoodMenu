@@ -5,7 +5,7 @@ const StyledLateralMenu = styled("div")`
   top: 0; /* top-0 */
   left: 0; /* left-0 */
   height: 100%; /* h-full */
-  width: 280px; /* w-[280px] */
+  width: 280px;
   background-color: white; /* bg-white */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
@@ -22,10 +22,13 @@ const StyledLateralMenu = styled("div")`
 
   .lat-bar-header {
     background-color: #dc2626; /* bg-red-600 */
+    position: sticky;
+    top: 0; /* fixar no topo */
     color: white; /* text-white */
     padding: 1.25rem; /* p-5 */
     display: flex; /* flex */
     align-items: center; /* items-center */
+    z-index: 100;
   }
 
   .close-button {
@@ -84,6 +87,18 @@ const StyledLateralMenu = styled("div")`
     flex-direction: column; /* flex-col */
     font-size: 0.75rem; /* text-xs (equivalente a 12px) */
     color: #4b5563; /* text-gray-600 */
+  }
+
+  @media (min-width: 640px) {
+  }
+  @media (min-width: 768px) {
+  width: 450px;
+  }
+  @media (min-width: 1024px) {
+  width: 450px;
+  }
+  @media (min-width: 1366px) {
+  width: 450px;
   }
 `;
 
