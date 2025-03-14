@@ -1,19 +1,21 @@
 import styled from "styled-components";
 
 const StyledLateralMenu = styled("div")`
-  position: absolute; /* absolute */
-  top: 0; /* top-0 */
-  left: 0; /* left-0 */
-  height: 100%; /* h-full */
-  width: 280px;
-  background-color: white; /* bg-white */
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
-  z-index: 40; /* z-40 */
-  transform: translateX(0); /* transform (padrão visível) */
-  transition: transform 0.3s ease-in-out; /* transition-transform duration-300 */
-  overflow-y: auto; /* overflow-y-auto */
-  font-family: Arial, Helvetica, sans-serif;
+  .lat-bar-all {
+    position: fixed; /* absolute */
+    top: 0; /* top-0 */
+    left: 0; /* left-0 */
+    height: 100%; /* h-full */
+    width: 280px;
+    background-color: white; /* bg-white */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+    z-index: 20; /* z-40 */
+    transform: translateX(0); /* transform (padrão visível) */
+    transition: transform 0.3s ease-in-out; /* transition-transform duration-300 */
+    overflow-y: auto; /* overflow-y-auto */
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
   /* Para esconder a sidebar (exemplo de estado fechado) */
   .hidden {
@@ -89,16 +91,30 @@ const StyledLateralMenu = styled("div")`
     color: #4b5563; /* text-gray-600 */
   }
 
+  .shadow-background {
+    background-color: #00000096;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+  }
   @media (min-width: 640px) {
   }
   @media (min-width: 768px) {
-  width: 450px;
+    .lat-bar-all {
+      width: 450px;
+    }
   }
   @media (min-width: 1024px) {
-  width: 450px;
+    .lat-bar-all {
+      width: 450px;
+    }
   }
   @media (min-width: 1366px) {
-  width: 450px;
+    .lat-bar-all {
+      width: 450px;
+    }
   }
 `;
 

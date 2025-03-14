@@ -10,7 +10,6 @@ const StyledLateralBardOption = styled("div")`
   cursor: pointer; /* cursor-pointer */
   color: #4b5563; /* text-gray-600 */
 
-
   .option-icon {
     margin-right: 0.75rem; /* mr-3 */
   }
