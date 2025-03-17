@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 const StyledAddCart = styled("div")`
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  transition: transform 0.3s;
-  z-index: 30;
+  z-index: 100;
 
   .cart-container {
     background-color: white;
@@ -42,6 +41,78 @@ const StyledAddCart = styled("div")`
     font-size: 1.125rem; /* equivalent to text-lg */
     font-weight: bold;
   }
+
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+  .quantity-button {
+    width: 2.5rem; /* equivalent to w-10 */
+    height: 2.5rem; /* equivalent to h-10 */
+    border-radius: 9999px; /* equivalent to rounded-full */
+    background-color: #d6d6d6; /* equivalent to bg-gray-100 */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: #9b9b9b; /* equivalent to hover:bg-gray-200 */
+    }
+    transition: background-color 0.2s; /* equivalent to transition-colors */
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  .current-quantity {
+    margin-left: 1rem; /* equivalent to mx-4 */
+    margin-right: 1rem; /* equivalent to mx-4 */
+    font-weight: bold;
+    font-size: 1.25rem; /* equivalent to text-xl */
+    width: 2.5rem; /* equivalent to w-10 */
+    text-align: center;
+  }
+
+  .confirm-button {
+    width: 100%; /* equivalent to w-full */
+    padding-top: 0.75rem; /* equivalent to py-3 */
+    padding-bottom: 0.75rem; /* equivalent to py-3 */
+    background-color: #e53e3e; /* equivalent to bg-red-600 */
+    color: white;
+    border: none;
+    border-radius: 0.75rem; /* equivalent to rounded-xl */
+    font-weight: bold;
+    font-size: 1.125rem; /* equivalent to text-lg */
+    &:hover {
+      background-color: #c53030; /* equivalent to bg-red-700 */
+      transform: scale(1.02);
+    }
+    transition: all 0.2s;
+    &:active {
+      transform: scale(0.98);
+    }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* equivalent to shadow-md */
+  }
+
+  .price-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem; /* equivalent to mb-2 */
+  }
+
+  .price-text {
+    color: #4a5568; /* equivalent to text-gray-700 */
+    font-weight: 500; /* equivalent to font-medium */
+  }
+
+  .total-price {
+    font-weight: bold; /* equivalent to font-bold */
+    font-size: 1.125rem; /* equivalent to text-lg */
+  }
+
 `;
 
 export default StyledAddCart;

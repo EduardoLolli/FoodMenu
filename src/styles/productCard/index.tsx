@@ -7,10 +7,10 @@ const StyledProductCard = styled("div")`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: box-shadow 0.3s, transform 0.3s;
-  &:hover {
+  /* &:hover {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.01);
-  }
+  } */
 
   .img-card-container {
     position: relative;

@@ -12,6 +12,7 @@ export const FoodMenuProvider = ({
   const [lateralBar, setLateralBar] = useState(false);
   const [productsApi, setProductsApi] = useState<ICatProdutos[] | null>(null);
   const [loading, setLoading] = useState(false);
+  const [useAddCart, setUseAddCart] = useState(false);
 
   const handleGetCharacter = async (): Promise<void> => {
     const URL = "http://localhost:3000/categories";
@@ -30,8 +31,14 @@ export const FoodMenuProvider = ({
   }, []);
 
   const value: IFoodMenu = useMemo(
-    () => ({ lateralBar, setLateralBar, productsApi }),
-    [lateralBar, productsApi]
+    () => ({
+      lateralBar,
+      setLateralBar,
+      productsApi,
+      useAddCart,
+      setUseAddCart,
+    }),
+    [lateralBar, productsApi, useAddCart]
   );
 
   if (loading) {

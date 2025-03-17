@@ -8,26 +8,29 @@ const StyledAditionalOptionsDiv = styled("div")`
     margin-bottom: 3px;
   }
 
-  .add-opt-div{
-  max-height: 16rem;
-  overflow-y: auto;
-  padding-right: 0.5rem;
-  scrollbar-width: thin;
-  scrollbar-color: #f56565 #f7fafc;
+  .add-opt-div {
+    max-height: 16rem;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: #f56565 #f7fafc;
 
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
 
-  &::-webkit-scrollbar-track {
-    background: #f7fafc;
-  }
+    &::-webkit-scrollbar-track {
+      background: #f7fafc;
+    }
 
-  &::-webkit-scrollbar-thumb {
-    background-color: #f56565;
-    border-radius: 9999px;
+    &::-webkit-scrollbar-thumb {
+      background-color: #f56565;
+      border-radius: 9999px;
+    }
   }
-  
+  .space {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
   }
 `;
 

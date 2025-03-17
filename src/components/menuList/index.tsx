@@ -5,11 +5,13 @@ import { FoodMenuContext } from "../../context";
 import ProductCard from "../ProductCard";
 import StyledProductDisplay from "../../styles/productGrid";
 import { IProduto } from "../../context/interface";
+import AddCart from "../addCart";
 
 const MenuList = () => {
   const [inputValue, setInputValue] = useState("");
 
-  const { productsApi } = useContext(FoodMenuContext);
+  const { productsApi, useAddCart, setUseAddCart } =
+    useContext(FoodMenuContext);
   const allProducts =
     productsApi?.flatMap((categoria) => categoria.products) || [];
   const [menu, setMenu] = useState<IProduto[]>([]);
@@ -25,6 +27,7 @@ const MenuList = () => {
 
   return (
     <StyledMenuList>
+      {useAddCart ? <AddCart></AddCart> : null}
       <div className="input-container">
         <input
           onChange={(e) => {

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const StyledAddOption = styled("div")`
   display: flex;
+  margin: 2px;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
@@ -30,6 +31,22 @@ const StyledAddOption = styled("div")`
   .option-container label {
     cursor: pointer;
   }
+
+  .option-name {
+    font-weight: 500;
+  }
+
+  .option-desc {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+
+  .option-price {
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+
+  
 `;
 
 export default StyledAddOption;

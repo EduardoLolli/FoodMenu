@@ -2,6 +2,8 @@ export interface IFoodMenu {
   lateralBar: boolean;
   setLateralBar: React.Dispatch<React.SetStateAction<boolean>>;
   productsApi: ICatProdutos[] | null;
+  useAddCart: boolean;
+  setUseAddCart: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface ICatProdutos {
