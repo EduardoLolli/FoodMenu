@@ -1,16 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MenuPage from "../pages/menu";
-import LateralMenu from "../components/lateralMenu";
+import { FoodMenuProvider } from "../context";
+import MenuList from "../components/menuList";
+import AddCart from "../components/addCart";
 
 const FoodMenuRoutes = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MenuPage />} />
-        <Route path="lateralmenu" element={<LateralMenu/>} />
-        <Route />
-        <Route />
-      </Routes>
+      <FoodMenuProvider>
+        <Routes>
+          <Route path="/menu" element={<MenuPage><MenuList></MenuList></MenuPage>} />
+          <Route path="/addcart" element={<AddCart />} />
+          <Route />
+          <Route />
+        </Routes>
+      </FoodMenuProvider>
     </BrowserRouter>
   );
 };

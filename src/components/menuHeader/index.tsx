@@ -1,11 +1,16 @@
+import { useContext } from "react";
 import StyledMenuHeader from "../../styles/menuHeader";
+import { FoodMenuContext } from "../../context";
+import LateralMenu from "../lateralMenu";
 
 const MenuHeader = () => {
   const teste = true;
+  const { lateralBar, setLateralBar } = useContext(FoodMenuContext);
   return (
     <StyledMenuHeader>
+      {lateralBar ? <LateralMenu></LateralMenu> : <></>}
       <div className="first-div">
-        <button>
+        <button onClick={() => setLateralBar(!lateralBar)}>
           <span className="material-symbols-outlined menu-icon">menu</span>
         </button>
         <span className="material-symbols-outlined menu-icon">
@@ -17,13 +22,7 @@ const MenuHeader = () => {
         <span className="material-symbols-outlined menu-icon shopping-cart">
           shopping_cart
         </span>
-        {teste ? (
-          <></>
-        ) : (
-          <span className="shopping-cart-count">
-            3
-          </span>
-        )}
+        {teste ? <></> : <span className="shopping-cart-count">3</span>}
       </div>
     </StyledMenuHeader>
   );

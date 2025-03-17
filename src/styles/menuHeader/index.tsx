@@ -5,11 +5,12 @@ const StyledMenuHeader = styled("header")`
   background-color: #dc2626; /* bg-red-600 */
   color: white; /* text-white */
   padding: 1rem; /* p-4 */
+  width: 100%;
   display: flex; /* flex */
   justify-content: space-between; /* justify-between */
   align-items: center; /* items-center */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
-  position: sticky; /* sticky */
+  position: fixed; /* sticky */
   top: 0; /* top-0 */
   z-index: 20; /* z-20 */
 
