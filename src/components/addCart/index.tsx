@@ -1,5 +1,7 @@
 import StyledAddCartInfo from "../../styles/addCartInfo";
 import StyledAddCart from "../../styles/addShoppinhCar";
+import StyledAditionalOptionsDiv from "../../styles/aditionalOptionsDiv";
+import AddOption from "../addOption";
 
 const AddCart = () => {
   return (
@@ -31,29 +33,14 @@ const AddCart = () => {
           </div>
         </StyledAddCartInfo>
 
-        <div className="mb-5">
-          <h4 className="font-bold mb-3">Opções adicionais</h4>
-          <div className="max-h-64 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-red-500 scrollbar-track-gray-100 scrollbar-thumb-rounded-full">
+        <StyledAditionalOptionsDiv>
+          <h4>Opções adicionais</h4>
+          <div className="add-opt-div">
             <div className="space-y-3">
-              {/* <div className="flex items-center justify-between p-3 border border-gray-200 rounded-xl hover:border-red-300 hover:shadow-sm transition-all duration-300 cursor-pointer">
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="extraSauce"
-                    className="w-5 h-5 accent-red-600 mr-3 cursor-pointer"
-                  />
-                  <label htmlFor="extraSauce" className="cursor-pointer">
-                    <div className="font-medium">Molho especial</div>
-                    <div className="text-xs text-gray-500">
-                      Porção extra de molho da casa
-                    </div>
-                  </label>
-                </div>
-                <span className="font-medium text-sm">+ R$ 2,00</span>
-              </div> */}
+              <AddOption></AddOption>
             </div>
           </div>
-        </div>
+        </StyledAditionalOptionsDiv>
 
         <div className="flex items-center justify-center mb-5">
           <button className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors">
