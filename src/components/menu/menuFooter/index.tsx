@@ -1,4 +1,4 @@
-import StyledMenuFooter from "../../styles/menuFooter";
+import StyledMenuFooter from "../../../styles/menuFooter";
 
 const MenuFooter = () => {
   return (

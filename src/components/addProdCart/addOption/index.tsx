@@ -1,4 +1,4 @@
-import StyledAddOption from "../../styles/addOption";
+import StyledAddOption from "../../../styles/addOption";
 
 const AddOption = () => {
   return (
@@ -7,9 +7,7 @@ const AddOption = () => {
         <input type="checkbox" id="extraSauce" />
         <label htmlFor="extraSauce">
           <div className="option-name">Molho especial</div>
-          <div className="option-desc">
-            Porção extra de molho da casa
-          </div>
+          <div className="option-desc">Porção extra de molho da casa</div>
         </label>
       </div>
       <span className="option-price">+ R$ 2,00</span>

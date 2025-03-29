@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import StyledLateralMenu from "../../styles/lateralMenu";
-import LateralBarOption from "../lateralBarOption";
+import StyledLateralMenu from "../../../styles/lateralMenu";
+import { FoodMenuContext } from "../../../context";
 import LateralBarSection from "../lateralBarSection";
-import { FoodMenuContext } from "../../context";
+import LateralBarOption from "../lateralBarOption";
 
 const LateralMenu = () => {
   const { lateralBar, setLateralBar } = useContext(FoodMenuContext);
@@ -41,56 +41,49 @@ const LateralMenu = () => {
             <LateralBarSection sectionName="Aplicação">
               <LateralBarOption
                 optionIcon="cancel"
-                optionText="Cancelar Venda"
+                optionText="Opção texto"
               />
               <LateralBarOption
                 optionIcon="point_of_sale"
-                optionText="Fechar Caixa"
+                optionText="Opção texto"
               />
               <LateralBarOption
                 optionIcon="settings"
-                optionText="Funções Gerais"
+                optionText="Opção texto"
               />
               <LateralBarOption
                 optionIcon="receipt_long"
-                optionText="Funções Fiscais"
+                optionText="Opção texto"
               />
             </LateralBarSection>
 
             <LateralBarSection sectionName="Consumidor">
               <LateralBarOption
                 optionIcon="person_add"
-                optionText="Cadastro de Consumidor"
+                optionText="Opção texto"
               ></LateralBarOption>
               <LateralBarOption
                 optionIcon="credit_card"
-                optionText="Crédito Pessoal"
+                optionText="Opção texto"
               ></LateralBarOption>
             </LateralBarSection>
 
             <LateralBarSection sectionName="Administração">
               <LateralBarOption
                 optionIcon="sync_alt"
-                optionText="Trocar de modo"
+                optionText="Opção texto"
               ></LateralBarOption>
               <LateralBarOption
                 optionIcon="terminal"
-                optionText="Verificar Log ativo"
+                optionText="Opção texto"
               ></LateralBarOption>
               <LateralBarOption
                 optionIcon="support_agent"
-                optionText="Fale Conosco"
+                optionText="Opção texto"
               ></LateralBarOption>
               <LateralBarOption
                 optionIcon="logout"
                 optionText="Sair"
-              ></LateralBarOption>
-            </LateralBarSection>
-
-            <LateralBarSection sectionName="Local X Nuvem">
-              <LateralBarOption
-                optionIcon="history_toggle_off"
-                optionText="Verificar Apontamento"
               ></LateralBarOption>
             </LateralBarSection>
           </div>

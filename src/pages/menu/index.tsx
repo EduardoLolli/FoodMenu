@@ -1,5 +1,5 @@
-import MenuFooter from "../../components/menuFooter";
-import MenuHeader from "../../components/menuHeader";
+import MenuFooter from "../../components/menu/menuFooter";
+import MenuHeader from "../../components/menu/menuHeader";
 import StyledMenuPage from "../../styles/menuPage";
 
 const MenuPage = ({ children }: { children: React.ReactNode }) => {

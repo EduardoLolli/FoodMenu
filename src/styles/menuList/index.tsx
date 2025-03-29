@@ -34,6 +34,12 @@ const StyledMenuList = styled("div")`
     top: 0.40rem;
     color: #6b7280;
   }
+
+  .menu-title{
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  }
 `;
 
 export default StyledMenuList;

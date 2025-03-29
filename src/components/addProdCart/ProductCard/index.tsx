@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
-import { IProduto } from "../../context/interface";
-import StyledProductCard from "../../styles/productCard";
-import { FoodMenuContext } from "../../context";
+import { useContext } from "react";
+import { FoodMenuContext } from "../../../context";
+import { IProduto } from "../../../context/interface";
+import StyledProductCard from "../../../styles/productCard";
 
 const ProductCard = ({ produto }: { produto: IProduto }) => {
-  const { useAddCart, setUseAddCart } = useContext(FoodMenuContext);
+  const { setUseAddCart } = useContext(FoodMenuContext);
 
   return (
     <StyledProductCard onClick={() => setUseAddCart(true)}>

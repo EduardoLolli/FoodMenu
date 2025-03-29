@@ -1,17 +1,19 @@
 import { useContext } from "react";
-import { FoodMenuContext } from "../../context";
-import StyledAddCartInfo from "../../styles/addCartInfo";
-import StyledAddCart from "../../styles/addShoppinhCar";
-import StyledAditionalOptionsDiv from "../../styles/aditionalOptionsDiv";
 import AddOption from "../addOption";
+import StyledAddCart from "../../../styles/addShoppinhCar";
+import { FoodMenuContext } from "../../../context";
+import StyledAddCartInfo from "../../../styles/addCartInfo";
+import StyledAditionalOptionsDiv from "../../../styles/aditionalOptionsDiv";
 
 const AddCart = () => {
-  const { useAddCart, setUseAddCart } =
-    useContext(FoodMenuContext);
+  const { useAddCart, setUseAddCart } = useContext(FoodMenuContext);
 
   return (
     <StyledAddCart>
-      <div className="fake-background"></div>
+      <div
+        className="fake-background"
+        onClick={() => setUseAddCart(!useAddCart)}
+      ></div>
       <div className="cart-container">
         <div className="title-cart-header">
           <button>
@@ -45,9 +47,24 @@ const AddCart = () => {
         </StyledAddCartInfo>
 
         <StyledAditionalOptionsDiv>
+          <div className="travel-option">
+            <div>
+              <h4>Para viagem</h4>
+              <label className="travel-label ">
+                <input type="checkbox" value="" className="sr-only peer" />
+              </label>
+            </div>
+          </div>
+
           <h4>Opções adicionais</h4>
           <div className="add-opt-div">
             <div className="space">
+              <AddOption></AddOption>
+              <AddOption></AddOption>
+              <AddOption></AddOption>
+              <AddOption></AddOption>
+              <AddOption></AddOption>
+              <AddOption></AddOption>
               <AddOption></AddOption>
               <AddOption></AddOption>
             </div>

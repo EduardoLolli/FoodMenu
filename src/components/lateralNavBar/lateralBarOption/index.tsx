@@ -1,4 +1,4 @@
-import StyledLateralBardOption from "../../styles/lateralBarOption";
+import StyledLateralBardOption from "../../../styles/lateralBarOption";
 
 interface ILateralBarOptionProps {
   optionIcon: string;

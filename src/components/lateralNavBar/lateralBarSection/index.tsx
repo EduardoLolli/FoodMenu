@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import StyledLateralBarSection from "../../styles/lateralBarSection";
+import StyledLateralBarSection from "../../../styles/lateralBarSection";
 interface ILateralBarSectionProps {
   sectionName: string;
   children: ReactNode;

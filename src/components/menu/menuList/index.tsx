@@ -1,17 +1,16 @@
 import { useContext, useEffect, useState } from "react";
-import StyledMenuList from "../../styles/menuList";
-import StyledButtonsDisplay from "../../styles/menuButton";
-import { FoodMenuContext } from "../../context";
-import ProductCard from "../ProductCard";
-import StyledProductDisplay from "../../styles/productGrid";
-import { IProduto } from "../../context/interface";
-import AddCart from "../addCart";
+import StyledMenuList from "../../../styles/menuList";
+import StyledButtonsDisplay from "../../../styles/menuButton";
+import { FoodMenuContext } from "../../../context";
+import StyledProductDisplay from "../../../styles/productGrid";
+import { IProduto } from "../../../context/interface";
+import AddCart from "../../addProdCart/addCart";
+import ProductCard from "../../addProdCart/ProductCard";
 
 const MenuList = () => {
   const [inputValue, setInputValue] = useState("");
 
-  const { productsApi, useAddCart, setUseAddCart } =
-    useContext(FoodMenuContext);
+  const { productsApi, useAddCart } = useContext(FoodMenuContext);
   const allProducts =
     productsApi?.flatMap((categoria) => categoria.products) || [];
   const [menu, setMenu] = useState<IProduto[]>([]);
@@ -73,7 +72,7 @@ const MenuList = () => {
         })}
       </StyledButtonsDisplay>
 
-      <h2 className="text-xl font-bold mb-3">{sectionName}</h2>
+      <h2 className="menu-title">{sectionName}</h2>
 
       <StyledProductDisplay>
         <div className="product-grid">

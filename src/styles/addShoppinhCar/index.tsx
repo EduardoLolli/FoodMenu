@@ -3,7 +3,9 @@ import styled from "styled-components";
 const StyledAddCart = styled("div")`
   position: fixed;
   bottom: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  z-index: 50;
 
   .cart-container {
     background-color: white;
@@ -82,6 +84,7 @@ const StyledAddCart = styled("div")`
     background-color: #e53e3e; /* equivalent to bg-red-600 */
     color: white;
     border: none;
+    margin-bottom: 20px;
     border-radius: 0.75rem; /* equivalent to rounded-xl */
     font-weight: bold;
     font-size: 1.125rem; /* equivalent to text-lg */
@@ -113,6 +116,10 @@ const StyledAddCart = styled("div")`
     font-size: 1.125rem; /* equivalent to text-lg */
   }
 
+  .fake-background {
+    height: 100vh;
+    width: 100%;
+  }
 `;
 
 export default StyledAddCart;

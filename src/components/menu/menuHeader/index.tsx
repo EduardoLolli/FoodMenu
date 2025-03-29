@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import StyledMenuHeader from "../../styles/menuHeader";
-import { FoodMenuContext } from "../../context";
-import LateralMenu from "../lateralMenu";
+import StyledMenuHeader from "../../../styles/menuHeader";
+import LateralMenu from "../../lateralNavBar/lateralMenu";
+import { FoodMenuContext } from "../../../context";
 
 const MenuHeader = () => {
   const teste = true;
